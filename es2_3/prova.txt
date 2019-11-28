@@ -1,0 +1,2 @@
+cond when (> x y) then (= x 0) else (= y 0) //culo culo culo
+while (conds<=print /*culooo*/ read) do conds=conds+1

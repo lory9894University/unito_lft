@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="08f761f3-0131-4dcc-878a-0e86d122d37c" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/3_2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/out/production" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/IdToken.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/Lexer.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/NumberTok.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/Tag.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/Token.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Lexer/Word.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/out/production/3_2/Parser.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prova.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer" afterDir="true" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/IdToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/Lexer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/NumberTok.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/Tag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Lexer/Word.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Parser.java" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1TnKJV1u76M9zTTlIoTY4n6UvDe" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="Parser" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Parser" />
+      <module name="3_2" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Parser" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="08f761f3-0131-4dcc-878a-0e86d122d37c" name="Default Changelist" comment="" />
+      <created>1574090348096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1574090348096</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Parser.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="(char) look.tag" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
