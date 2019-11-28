@@ -118,9 +118,8 @@ public class Valutatore {
                 match(')');
                 break;
             case Tag.NUM:
+                fact_val=((NumberTok)look).getNumber();
                 match(Tag.NUM);
-                NumberTok num = (NumberTok)look;
-                fact_val=num.getNumber();
                 break;
             default:
                 error("procedure fact");
