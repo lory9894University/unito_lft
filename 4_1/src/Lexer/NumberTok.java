@@ -8,6 +8,10 @@ public class NumberTok extends Token {
         this.number = Integer.parseInt(number);
     }
 
+    public int getNumber(){
+    	return number;
+    }
+
     @Override
     public String toString() {
         return "<" + tag + "," + number + ">";
