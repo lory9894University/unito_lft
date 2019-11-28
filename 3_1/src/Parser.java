@@ -1,5 +1,4 @@
 import Lexer.*;
-
 import java.io.*;
 
 public class Parser {
@@ -24,82 +23,95 @@ public class Parser {
 
     void match(int t) {
 	if (look.tag == t) {
-	    if (look.tag != Tag.EOF)
-	        move();
+	    if (look.tag != Tag.EOF) move();
 	} else error("syntax error");
     }
 
     public void start() {
-	expr();
-	match(Tag.EOF);
+	if(look.tag== '(' || look.tag==Tag.NUM){
+		expr();
+		match(Tag.EOF);
+	} else 
+		error("Error in Start");
+	
     }
 
     private void expr() {
-        term();
-        exprp();
+	if(look.tag== '(' || look.tag==Tag.NUM){
+		term();
+		exprp();
+	}else
+		error("Error in Expr");
     }
 
     private void exprp() {
-        switch (look.tag) {
-            case '+':
-                match('+');
-                term();
-                exprp();
-                break;
-            case '-':
-                match('-');
-                term();
-                exprp();
-                break;
-            case ')':
-            case Tag.EOF:
-                break;
-            default:
-                error("procedure exprp");
-        }
+	switch (look.tag) {
+	case '+':
+		match('+');
+		term();
+		exprp();
+		break;
+	case '-':
+		match('-');
+		term();
+		exprp();
+		break;
+	case ')':
+		break;
+	case Tag.EOF:
+		match(Tag.EOF);
+		break;
+	default:
+		error("Error in Exprp");
+	}
     }
 
     private void term() {
-        fact();
-        termp();
+    if(look.tag== '(' || look.tag==Tag.NUM){
+		fact();
+		termp();
+	} else 
+		error("Error in Term");
     }
 
     private void termp() {
-        switch (look.tag) {
-            case '*':
-                match('*');
-                fact();
-                termp();
-                break;
-            case '/':
-                match('/');
-                fact();
-                termp();
-                break;
-            case ')':
-            case '+':
-            case '-':
-            case Tag.EOF:
-                break;
-            default:
-                error("procedure termp");
-        }
-
-    }
+    switch(look.tag){
+	case '*':
+		match('*');
+		fact();
+		termp();
+		break;
+	case '/':
+		match('/');
+		fact();
+		termp();
+		break;
+	case Tag.EOF:
+		match(Tag.EOF);
+		break;
+	case '+':
+	case '-':
+	case ')':
+		break;
+	default:
+			error("Error in Termp");
+	}
+	}
 
     private void fact() {
-        switch (look.tag) {
-            case '(':
-                match('(');
-                expr();
-                match(')');
-                break;
-            case Tag.NUM:
-                match(Tag.NUM);
-                break;
-            default:
-                error("procedure fact"); //todo: controllare che funzioni
-        }
+    switch(look.tag){
+			case '(':
+				match('(');
+				expr();
+				match(')');
+				break;
+			case Tag.NUM:
+				match(Tag.NUM);
+				break;
+			default:
+				error("Error in fact");
+				
+	}
     }
 		
     public static void main(String[] args) {
