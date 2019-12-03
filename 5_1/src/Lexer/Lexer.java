@@ -190,7 +190,7 @@ public class Lexer {
                                 + id.toString());
                     }
 
-                    return new IdToken(Tag.ID, id.toString());
+                    return new Word(Tag.ID, id.toString());
 
                 } else if (Character.isDigit(peek)) { //todo: this can't recognize anything but integer
                     StringBuffer number = new StringBuffer();

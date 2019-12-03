@@ -1,7 +1,7 @@
 package Lexer;
 
 public class NumberTok extends Token {
-    int number = 0;
+    public int number = 0;
 
     public NumberTok(int t, String number) {
         super(t);
