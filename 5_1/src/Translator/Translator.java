@@ -82,8 +82,18 @@ public class Translator {
         switch(look.tag) {
             case '=':
                 match('=');
+                int assign_id_addr=0;
+                if (look.tag==Tag.ID) {
+                    assign_id_addr = st.lookupAddress(((Word) look).lexeme);
+                    if (assign_id_addr == -1) {
+                        assign_id_addr = count;
+                        st.insert(((Word) look).lexeme, count++);
+                    }
+                }else
+                    error("expected identifier," + look + " is not one");
                 match(Tag.ID);
                 expr();
+                code.emit(OpCode.istore,assign_id_addr);
                 break;
             case Tag.COND:
                 match(Tag.COND);
@@ -102,7 +112,8 @@ public class Translator {
                 break;
             case Tag.PRINT:
                 match(Tag.PRINT);
-                exprlist();
+                exprlist(0);
+                code.emit(OpCode.invokestatic,1);
                 break;
             case Tag.READ:
                 match(Tag.READ);
@@ -124,27 +135,40 @@ public class Translator {
         }
      }
 
-    public void exprlist(){
+    public void exprlist(int printSumMul){
         switch (look.tag){
             case '(':
             case Tag.NUM:
             case Tag.ID:
                 expr();
-                exprlistp();
+                exprlistp(printSumMul);
                 break;
             default:
                 error("procedure exprlist");
         }
     }
 
-    public void exprlistp() {
+    public void exprlistp(int printSumMul) { //print 0, sum 1, mul 2
         switch (look.tag) {
             case '(':
                 match('(');
             case Tag.NUM:
             case Tag.ID:
                 expr();
-                exprlistp();
+                switch (printSumMul){
+                    case 0:
+                        code.emit(OpCode.invokestatic,1);
+                        break;
+                    case 1:
+                        code.emit(OpCode.iadd);
+                        break;
+                    case 2:
+                        code.emit(OpCode.imul);
+                        break;
+                    default:
+                        error("exprlist dont know wat to do");
+                }
+                exprlistp(printSumMul);
                 break;
             case ')':
                 break;
@@ -179,18 +203,34 @@ public class Translator {
 
     public void bexprp (){
         if (look.tag==Tag.RELOP){
+            String relop = ((Word)look).lexeme;
             match(Tag.RELOP);
             expr();
             expr();
+            if (relop.compareTo("<")==0)
+                code.emit(OpCode.if_icmplt);
+            else if (relop.compareTo("<=")==0)
+                code.emit(OpCode.if_icmple);
+            else if (relop.compareTo("==")==0)
+                code.emit(OpCode.if_icmpeq);
+            else if (relop.compareTo(">")==0)
+                code.emit(OpCode.if_icmpgt);
+            else if (relop.compareTo(">=")==0)
+                code.emit(OpCode.if_icmpge);
+            else if (relop.compareTo("<>")==0)
+                code.emit(OpCode.if_icmpne);
+            else error("shoudn't ever appear");
         }else error("procedure bexprp");
     }
 
     public void expr(){
         switch (look.tag){
             case Tag.NUM:
+                code.emit(OpCode.ldc,((NumberTok)look).number);
                 match(Tag.NUM);
                 break;
             case Tag.ID:
+                code.emit(OpCode.iload,st.lookupAddress(((Word)look).lexeme));
                 match(Tag.ID);
                 break;
             case '(':
@@ -207,13 +247,11 @@ public class Translator {
         switch(look.tag) {
             case '+':
                 match('+');
-                exprlist();
-                code.emit(OpCode.iadd);
+                exprlist(1);
                 break;
             case '*':
                 match('*');
-                exprlist();
-                code.emit(OpCode.imul);
+                exprlist(1);
                 break;
             case '-':
                 match('-');

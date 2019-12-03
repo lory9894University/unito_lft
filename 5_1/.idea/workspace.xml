@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7e81989-a0ed-4ceb-b892-377f96e7af71" name="Default Changelist" comment="" />
+    <list default="true" id="e7e81989-a0ed-4ceb-b892-377f96e7af71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prova.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prova.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lexer/IdToken.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lexer/Lexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Lexer/NumberTok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lexer/NumberTok.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Translator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Translator/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator/Translator.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,8 +66,27 @@
       </list>
     </option>
   </component>
-  <component name="SvnConfiguration">
-    <configuration />
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>$USER_HOME$/.subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="$PROJECT_DIR$" />
+          <option name="myCopyRoot" value="$PROJECT_DIR$" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,35 +98,63 @@
     </task>
     <servers />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="not broken yay" />
+    <option name="LAST_COMMIT_MESSAGE" value="not broken yay" />
+  </component>
   <component name="WindowStateProjectService">
     <state x="590" y="214" width="847" height="684" key="#Project_Structure" timestamp="1575360463967">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="590" y="214" width="847" height="684" key="#Project_Structure/70.27.1850.1053@70.27.1850.1053" timestamp="1575360463967" />
-    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575362450912">
+    <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1575382336310">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575362450912" />
-    <state width="879" height="275" key="GridCell.Tab.0.bottom" timestamp="1575361998521">
+    <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575382336310" />
+    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575385654392">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575361998521" />
-    <state width="879" height="275" key="GridCell.Tab.0.center" timestamp="1575361998520">
+    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575385654392" />
+    <state width="879" height="275" key="GridCell.Tab.0.bottom" timestamp="1575384764252">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575361998520" />
-    <state width="879" height="275" key="GridCell.Tab.0.left" timestamp="1575361998519">
+    <state width="879" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764252" />
+    <state width="879" height="275" key="GridCell.Tab.0.center" timestamp="1575384764251">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575361998519" />
-    <state width="879" height="275" key="GridCell.Tab.0.right" timestamp="1575361998521">
+    <state width="879" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
+    <state width="879" height="275" key="GridCell.Tab.0.left" timestamp="1575384764251">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
-    <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575361998521" />
+    <state width="879" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
+    <state width="879" height="275" key="GridCell.Tab.0.right" timestamp="1575384764251">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
+    <state width="879" height="340" key="GridCell.Tab.1.bottom" timestamp="1575384327556">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="879" height="340" key="GridCell.Tab.1.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575384327556" />
+    <state width="879" height="340" key="GridCell.Tab.1.center" timestamp="1575384327556">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="879" height="340" key="GridCell.Tab.1.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575384327556" />
+    <state width="879" height="340" key="GridCell.Tab.1.left" timestamp="1575384327556">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="879" height="340" key="GridCell.Tab.1.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575384327556" />
+    <state width="879" height="340" key="GridCell.Tab.1.right" timestamp="1575384327556">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state width="879" height="340" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575384327556" />
     <state x="195" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1575362053868">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="195" y="259" width="672" height="678" key="search.everywhere.popup/70.27.1850.1053@70.27.1850.1053" timestamp="1575362053868" />
+    <state x="778" y="449" key="svn.passwordDialog" timestamp="1575385665616">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="778" y="449" key="svn.passwordDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575385665616" />
     <state x="773" y="244" width="455" height="625" key="svn.repositoryBrowser" timestamp="1575362417349">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -108,5 +163,19 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="767" y="457" width="445" height="200" key="svn.upgradeDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575362418841" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Translator/Translator.java</url>
+          <line>36</line>
+          <properties class="Translator.Translator" method="prog">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
