@@ -201,24 +201,24 @@ public class Translator {
         }else error("procedure bexpr");
     }
 
-    public void bexprp (){
+    public void bexprp (int labelFalse){
         if (look.tag==Tag.RELOP){
             String relop = ((Word)look).lexeme;
             match(Tag.RELOP);
             expr();
             expr();
             if (relop.compareTo("<")==0)
-                code.emit(OpCode.if_icmplt);
+                code.emit(OpCode.if_icmpge,labelFalse);
             else if (relop.compareTo("<=")==0)
-                code.emit(OpCode.if_icmple);
+                code.emit(OpCode.if_icmpgt,labelFalse);
             else if (relop.compareTo("==")==0)
-                code.emit(OpCode.if_icmpeq);
+                code.emit(OpCode.if_icmpne,labelFalse);
             else if (relop.compareTo(">")==0)
-                code.emit(OpCode.if_icmpgt);
+                code.emit(OpCode.if_icmple,labelFalse);
             else if (relop.compareTo(">=")==0)
-                code.emit(OpCode.if_icmpge);
+                code.emit(OpCode.if_icmplt,labelFalse);
             else if (relop.compareTo("<>")==0)
-                code.emit(OpCode.if_icmpne);
+                code.emit(OpCode.if_icmpeq,labelFalse);
             else error("shoudn't ever appear");
         }else error("procedure bexprp");
     }
