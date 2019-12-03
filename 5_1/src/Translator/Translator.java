@@ -97,14 +97,24 @@ public class Translator {
                 break;
             case Tag.COND:
                 match(Tag.COND);
-                bexpr();
+                int falseLabel = code.newLabel();
+                int trueLabel = code.newLabel();
+                bexpr(falseLabel);
                 stat(lnext);
+                code.emit(OpCode.GOto,trueLabel);
+                code.emitLabel(falseLabel);
                 elseopt(lnext);
+                code.emitLabel(trueLabel);
                 break;
             case Tag.WHILE:
                 match(Tag.WHILE);
-                bexpr();
+                int whileFalse = code.newLabel();
+                int whileTrue = code.newLabel();
+                code.emitLabel(whileTrue);
+                bexpr(whileFalse);
                 stat(lnext);
+                code.emit(OpCode.GOto,whileTrue);
+                code.emitLabel(whileFalse);
                 break;
             case Tag.DO:
                 match(Tag.DO);
@@ -166,7 +176,7 @@ public class Translator {
                         code.emit(OpCode.imul);
                         break;
                     default:
-                        error("exprlist dont know wat to do");
+                        error("exprlist dont know what to do");
                 }
                 exprlistp(printSumMul);
                 break;
@@ -193,10 +203,10 @@ public class Translator {
 
     }
 
-    public void bexpr(){
+    public void bexpr(int labelFalse){
         if (look.tag == '('){
             match('(');
-            bexprp();
+            bexprp(labelFalse);
             match(')');
         }else error("procedure bexpr");
     }
@@ -219,6 +229,10 @@ public class Translator {
                 code.emit(OpCode.if_icmplt,labelFalse);
             else if (relop.compareTo("<>")==0)
                 code.emit(OpCode.if_icmpeq,labelFalse);
+            else if (relop.compareTo("&&")==0)
+                code.emit(OpCode.iand);
+            else if (relop.compareTo("||")==0)
+                code.emit(OpCode.ior);
             else error("shoudn't ever appear");
         }else error("procedure bexprp");
     }

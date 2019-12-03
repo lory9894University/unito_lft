@@ -50,7 +50,6 @@ public class Lexer {
                 }
             }
             while (peek != (char)-1 && peek != '\n');
-            readch(br);
         }else if (peek == '*'){
             boolean asterics=false;
             peek = ' ';
