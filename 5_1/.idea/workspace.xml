@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7e81989-a0ed-4ceb-b892-377f96e7af71" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prova.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prova.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lexer/IdToken.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lexer/Lexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lexer/NumberTok.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lexer/NumberTok.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Translator/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator/CodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Translator/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator/Translator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -34,7 +32,20 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Translator">
+    <configuration name="Lexer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lexer.Lexer" />
+      <module name="4_2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lexer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Translator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Translator.Translator" />
       <module name="4_2" />
@@ -51,6 +62,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.Translator" />
+        <item itemvalue="Application.Lexer" />
       </list>
     </recent_temporary>
   </component>
@@ -111,25 +123,30 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575382336310" />
-    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575385654392">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state x="307" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575397581208">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
+    <state x="307" y="150" key="CommitChangelistDialog2/0.27.3840.1053@0.27.3840.1053" timestamp="1575397581208" />
     <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575385654392" />
-    <state width="879" height="275" key="GridCell.Tab.0.bottom" timestamp="1575384764252">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1575397472543">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.bottom/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
     <state width="879" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764252" />
-    <state width="879" height="275" key="GridCell.Tab.0.center" timestamp="1575384764251">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1575397472543">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.center/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
     <state width="879" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
-    <state width="879" height="275" key="GridCell.Tab.0.left" timestamp="1575384764251">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1575397472543">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.left/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
     <state width="879" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
-    <state width="879" height="275" key="GridCell.Tab.0.right" timestamp="1575384764251">
-      <screen x="70" y="27" width="1850" height="1053" />
+    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1575397472543">
+      <screen x="0" y="27" width="3840" height="1053" />
     </state>
+    <state width="1807" height="275" key="GridCell.Tab.0.right/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
     <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
     <state width="879" height="340" key="GridCell.Tab.1.bottom" timestamp="1575384327556">
       <screen x="70" y="27" width="1850" height="1053" />
@@ -169,11 +186,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Translator/Translator.java</url>
-          <line>36</line>
-          <properties class="Translator.Translator" method="prog">
+          <line>286</line>
+          <properties class="Translator.Translator" method="main">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="4" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/Lexer/Lexer.java</url>
+          <line>66</line>
+          <properties class="Lexer.Lexer" method="lexical_scan">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
