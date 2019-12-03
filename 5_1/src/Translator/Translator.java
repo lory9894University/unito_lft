@@ -48,20 +48,20 @@ public class Translator {
         }else error("procedure prog");
     }
 
-    public void statlist(){
+    public void statlist(int lnext){
         if (look.tag == '(') {
-            stat();
-            statlistp();
+            stat(lnext);
+            statlistp(lnext);
         }else{
             error("procedure statlist");
         }
     }
 
-    public void statlistp(){
+    public void statlistp(int lnext){
         switch (look.tag){
             case '(':
-                stat();
-                statlistp();
+                stat(lnext);
+                statlistp(lnext);
                 break;
             case ')':
                 break;
@@ -70,10 +70,10 @@ public class Translator {
         }
     }
 
-    public void stat(){
+    public void stat(int lnext){
         if (look.tag == '('){
             match('(');
-            statp();
+            statp(lnext);
             match(')');
         }else error("procedure stat");
     }
@@ -88,17 +88,17 @@ public class Translator {
             case Tag.COND:
                 match(Tag.COND);
                 bexpr();
-                stat();
-                elseopt();
+                stat(lnext);
+                elseopt(lnext);
                 break;
             case Tag.WHILE:
                 match(Tag.WHILE);
                 bexpr();
-                stat();
+                stat(lnext);
                 break;
             case Tag.DO:
                 match(Tag.DO);
-                statlist();
+                statlist(lnext);
                 break;
             case Tag.PRINT:
                 match(Tag.PRINT);
@@ -124,13 +124,41 @@ public class Translator {
         }
      }
 
-    public void elseopt(){
+    public void exprlist(){
+        switch (look.tag){
+            case '(':
+            case Tag.NUM:
+            case Tag.ID:
+                expr();
+                exprlistp();
+                break;
+            default:
+                error("procedure exprlist");
+        }
+    }
+
+    public void exprlistp() {
+        switch (look.tag) {
+            case '(':
+                match('(');
+            case Tag.NUM:
+            case Tag.ID:
+                expr();
+                exprlistp();
+                break;
+            case ')':
+                break;
+            default:
+                error("procedure exprlistp");
+        }
+    }
+    public void elseopt(int lnext){
         switch (look.tag){
             case '(':
                 match('(');
             case Tag.ELSE:
                 match(Tag.ELSE);
-                stat();
+                stat(lnext);
                 match(')');
                 break;
             case ')':
@@ -177,14 +205,30 @@ public class Translator {
 
     private void exprp() {
         switch(look.tag) {
-	// ... completare ...
+            case '+':
+                match('+');
+                exprlist();
+                code.emit(OpCode.iadd);
+                break;
+            case '*':
+                match('*');
+                exprlist();
+                code.emit(OpCode.imul);
+                break;
             case '-':
                 match('-');
                 expr();
                 expr();
                 code.emit(OpCode.isub);
                 break;
-	// ... completare ...
+            case '/':
+                match('/');
+                expr();
+                expr();
+                code.emit(OpCode.idiv);
+                break;
+            default:
+                error("procedure exprp");
         }
     }
 
