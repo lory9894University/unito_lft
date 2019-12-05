@@ -92,8 +92,8 @@ public class Translator {
                 }else
                     error("expected identifier," + look + " is not one");
                 match(Tag.ID);
-                expr();
-                code.emit(OpCode.istore,assign_id_addr);
+                expr(true);
+                code.emit(OpCode.istore, assign_id_addr);
                 break;
             case Tag.COND:
                 match(Tag.COND);
@@ -150,7 +150,7 @@ public class Translator {
             case '(':
             case Tag.NUM:
             case Tag.ID:
-                expr();
+                expr(false);
                 exprlistp(printSumMul);
                 break;
             default:
@@ -164,7 +164,7 @@ public class Translator {
                 match('(');
             case Tag.NUM:
             case Tag.ID:
-                expr();
+                expr(false);
                 switch (printSumMul){
                     case 0:
                         code.emit(OpCode.invokestatic,1);
@@ -212,21 +212,21 @@ public class Translator {
     }
 
     public void bexprp (int labelFalse){
-        if (look.tag==Tag.RELOP){
-            String relop = ((Word)look).lexeme;
+        if (look.tag==Tag.RELOP) {
+            String relop = ((Word) look).lexeme;
             match(Tag.RELOP);
-            expr();
-            expr();
-            if (relop.compareTo("<")==0)
-                code.emit(OpCode.if_icmpge,labelFalse);
-            else if (relop.compareTo("<=")==0)
-                code.emit(OpCode.if_icmpgt,labelFalse);
-            else if (relop.compareTo("==")==0)
-                code.emit(OpCode.if_icmpne,labelFalse);
-            else if (relop.compareTo(">")==0)
-                code.emit(OpCode.if_icmple,labelFalse);
-            else if (relop.compareTo(">=")==0)
-                code.emit(OpCode.if_icmplt,labelFalse);
+            expr(false);
+            expr(false);
+            if (relop.compareTo("<") == 0)
+                code.emit(OpCode.if_icmpge, labelFalse);
+            else if (relop.compareTo("<=") == 0)
+                code.emit(OpCode.if_icmpgt, labelFalse);
+            else if (relop.compareTo("==") == 0)
+                code.emit(OpCode.if_icmpne, labelFalse);
+            else if (relop.compareTo(">") == 0)
+                code.emit(OpCode.if_icmple, labelFalse);
+            else if (relop.compareTo(">=") == 0)
+                code.emit(OpCode.if_icmplt, labelFalse);
             else if (relop.compareTo("<>")==0)
                 code.emit(OpCode.if_icmpeq,labelFalse);
             else if (relop.compareTo("&&")==0)
@@ -237,14 +237,16 @@ public class Translator {
         }else error("procedure bexprp");
     }
 
-    public void expr(){
-        switch (look.tag){
+    public void expr(Boolean init) {
+        switch (look.tag) {
             case Tag.NUM:
-                code.emit(OpCode.ldc,((NumberTok)look).number);
+                code.emit(OpCode.ldc, ((NumberTok) look).number);
                 match(Tag.NUM);
                 break;
             case Tag.ID:
-                code.emit(OpCode.iload,st.lookupAddress(((Word)look).lexeme));
+                int address = st.lookupAddress(((Word) look).lexeme);
+                if (address == -1 && !init) error("variable " + ((Word) look).lexeme + " not initialized");
+                code.emit(OpCode.iload, address);
                 match(Tag.ID);
                 break;
             case '(':
@@ -269,14 +271,14 @@ public class Translator {
                 break;
             case '-':
                 match('-');
-                expr();
-                expr();
+                expr(false);
+                expr(false);
                 code.emit(OpCode.isub);
                 break;
             case '/':
                 match('/');
-                expr();
-                expr();
+                expr(false);
+                expr(false);
                 code.emit(OpCode.idiv);
                 break;
             default:
