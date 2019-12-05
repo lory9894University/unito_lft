@@ -1,7 +1,7 @@
 //prova
-/*(do (= a 3) (print a) (= a(+ a 1)) (print a))
-(do (= a 3) (cond(<= a 3) (do( = a ( + a 1)))))*/
-(do
+//(do (= a 3) (print a) (= a(+ a 1)) (print a))
+//(do (= a 3) (cond(<= a 3) (do( = a ( + a 1)))))
+/*(do
     (= a 3)
     (cond
         (<= a 3)
@@ -15,4 +15,12 @@
         )
     )
    (do (print a))
+)*/
+
+( do
+ (= x 1)
+ (while (<> x 0)
+ (do (read x)
+ (print x))
+ )
 )

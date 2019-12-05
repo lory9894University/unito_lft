@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prova.txt" beforeDir="false" afterPath="$PROJECT_DIR$/prova.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Lexer/Lexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Lexer/Lexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Translator/Translator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Translator/Translator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,31 +122,31 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="728" y="302" width="524" height="509" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/70.27.1850.1053@70.27.1850.1053" timestamp="1575382336310" />
-    <state x="307" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575397581208">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2" timestamp="1575546652023">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state x="307" y="150" key="CommitChangelistDialog2/0.27.3840.1053@0.27.3840.1053" timestamp="1575397581208" />
-    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575385654392" />
-    <state width="1807" height="275" key="GridCell.Tab.0.bottom" timestamp="1575397472543">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state x="601" y="150" width="777" height="814" key="CommitChangelistDialog2/70.27.1850.1053@70.27.1850.1053" timestamp="1575546652023" />
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom" timestamp="1575546430332">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1807" height="275" key="GridCell.Tab.0.bottom/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
-    <state width="879" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764252" />
-    <state width="1807" height="275" key="GridCell.Tab.0.center" timestamp="1575397472543">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.bottom/70.27.1850.1053@70.27.1850.1053" timestamp="1575546430332" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center" timestamp="1575546430331">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1807" height="275" key="GridCell.Tab.0.center/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
-    <state width="879" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
-    <state width="1807" height="275" key="GridCell.Tab.0.left" timestamp="1575397472543">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.center/70.27.1850.1053@70.27.1850.1053" timestamp="1575546430331" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left" timestamp="1575546430331">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1807" height="275" key="GridCell.Tab.0.left/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
-    <state width="879" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
-    <state width="1807" height="275" key="GridCell.Tab.0.right" timestamp="1575397472543">
-      <screen x="0" y="27" width="3840" height="1053" />
+    <state width="1804" height="275" key="GridCell.Tab.0.left/70.27.1850.1053@70.27.1850.1053" timestamp="1575546430331" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right" timestamp="1575546430331">
+      <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="1807" height="275" key="GridCell.Tab.0.right/0.27.3840.1053@0.27.3840.1053" timestamp="1575397472543" />
-    <state width="879" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575384764251" />
+    <state width="1804" height="275" key="GridCell.Tab.0.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575546430331" />
     <state width="879" height="340" key="GridCell.Tab.1.bottom" timestamp="1575384327556">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -164,6 +163,10 @@
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
     <state width="879" height="340" key="GridCell.Tab.1.right/70.27.1850.1053@70.27.1850.1053" timestamp="1575384327556" />
+    <state x="793" y="402" width="394" height="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575545651807">
+      <screen x="70" y="27" width="1850" height="1053" />
+    </state>
+    <state x="793" y="402" width="394" height="310" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/70.27.1850.1053@70.27.1850.1053" timestamp="1575545651807" />
     <state x="195" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1575362053868">
       <screen x="70" y="27" width="1850" height="1053" />
     </state>
@@ -186,7 +189,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/Translator/Translator.java</url>
-          <line>286</line>
+          <line>288</line>
           <properties class="Translator.Translator" method="main">
             <option name="EMULATED" value="true" />
           </properties>
