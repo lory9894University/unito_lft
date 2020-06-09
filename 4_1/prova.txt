@@ -1,1 +1,0 @@
-(cond(<= a 3) (do( = a ( + a 1))) (else(do (= a 3)))
