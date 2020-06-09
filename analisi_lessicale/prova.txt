@@ -1,2 +1,0 @@
-cond when (> x y) then (= x 0) else (= y 0)
-while (conds<=printread) do conds=conds+1
